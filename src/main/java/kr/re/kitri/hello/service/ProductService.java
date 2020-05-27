@@ -1,10 +1,9 @@
 package kr.re.kitri.hello.service;
-import kr.re.kitri.hello.model.Product;
-import org.springframework.stereotype.Service;
 
-@Service
+import kr.re.kitri.hello.model.Product;
+
 public interface ProductService {
 
-    //String retrieveProducts() { }
-   // Product viewProductDetail(int i) { }
+    String retrieveProducts();
+    Product viewProductDetail(int i);
 }

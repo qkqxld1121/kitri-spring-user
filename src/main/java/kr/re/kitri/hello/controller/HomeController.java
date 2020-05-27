@@ -12,37 +12,32 @@ import java.util.Map;
 
 @RestController
 public class HomeController {
-/*
-    @Autowired
-    private ProductService productService;
+
+    @Autowired private ProductService productService;
+    //@Autowired private AService aService;
 
     @GetMapping("/products/{productId}")
-    public Map<String, Object> getProductDetailsByProductId(@PathVariable int productId) {
+    public Map<String, Object> getProductDetailsByProductId(
+            @PathVariable int productId) {
         System.out.println(productId);
         Product p = productService.viewProductDetail(productId);
         Map<String, Object> result = new HashMap<>();
         result.put("status", "OK");
         result.put("data", p);
-
         return result;
     }
 
+
     @GetMapping("/products")
     public String getProducts() {
-/*
-        1. 요청해석.. 요청파라미터 확보, 헤더값을 확보
-        5. 결과값을 받아서 JSON 포맷을 만들어서 전송(응답)
-*/
-
-        // 해당되는 기능을 가진 서비스 함수를 호출하는 것
-        //return new ProductService().retrieveProducts(); //Autowired  선언전
-    /*
-        return productService.retrieveProducts(); //Autowired 를 선언하면서 이렇게 변경 할 수 있다.
+        // 1. 요청해석.. 요청파라미터 확보, 헤더값을 확보
+        // 5. 결과값을 받아서 JSON 포맷을 만들어서 전송(응답)
+        // 해당되는 기능을 가진 서비스 함수를 호출하는것..
+        return productService.retrieveProducts();
     }
 
     @GetMapping("/products/hello")
     public String hello() {
         return "hello";
     }
-    */
 }

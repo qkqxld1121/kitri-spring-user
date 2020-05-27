@@ -2,20 +2,17 @@ package kr.re.kitri.hello.model;
 
 public class Product {
     private String productId;
-    private String name;    //테이블에 컬럼명과 동일하게 가면 좋다.
+    private String name;
     private long price;
     private String description;
 
-    public Product() { }
+    public Product() {}
 
     public Product(String productId, String name, long price, String description) {
         this.productId = productId;
         this.name = name;
         this.price = price;
         this.description = description;
-    }
-
-    public Product(int i, String 아이폰11, int price, String iphone) {
     }
 
     public String getProductId() {
@@ -48,5 +45,15 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productId='" + productId + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
